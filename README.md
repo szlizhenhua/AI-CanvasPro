@@ -73,23 +73,6 @@
 4. **打开浏览器**
    访问 <http://localhost:8777> 即可使用。
 
-### 开发环境与验证
-
-- 本地服务默认端口为 `8777`，可通过环境变量 `AICANVAS_PORT` 修改。
-- 前端测试使用 Node.js 内置测试运行器：
-  ```bash
-  npm test
-  ```
-- 后端依赖集中维护在 `requirements.txt`，新增 Python 依赖时请同步写入该文件。
-- 本地用户数据默认写入 `user/`、生成输出写入 `output/`，这些目录不应作为功能代码直接提交。
-
-### 扩展节点与功能
-
-- 节点类型元数据集中在 `modules/nodeMeta.js`，节点注册入口在 `modules/registry.js`。
-- 新增节点组件时，优先复用 `components/` 下已有节点的 `render/update/unmount` 模式。
-- 涉及画布状态的改动应通过 `src/core/store.js` 的 action 更新，并补充对应的 `tests/` 单元测试。
-- 涉及节点命中、坐标转换、连线计算的改动应同步覆盖 `tests/math.test.js` 或相关交互测试。
-
 ### 方法 2：一键整合包（推荐普通用户）
 
 1. **下载整合包**
