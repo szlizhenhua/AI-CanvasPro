@@ -1,0 +1,63 @@
+# Python 缂傛挸鐡?
+__pycache__/
+*.pyc
+*.pyo
+
+# 鏉╂劘顢戦弮鍓佹暏閹撮攱鏆熼幑顕嗙礄娑撳秴鍙嗘惔鎿勭礆
+user/
+output/
+data/uploads/
+release/    
+
+# 閾忔碍瀚欓悳顖氼暔
+venv/
+
+# 缁崵绮洪弬鍥︽
+.DS_Store
+Thumbs.db
+docs/
+
+# 濠曟梻銇?濞村鐦惄顔肩秿
+demo123/
+tests/
+
+# Node
+node_modules/
+npm-debug.log*
+package-lock.json
+playwright-report/
+test-results/
+.playwright/
+.husky/_/
+
+# 閺堫剙婀村鈧崣鎴ｇ窡閸?
+dev-helper.js
+.agent/
+.agentsrules/
+.trae/
+.dev
+/dev
+.codex/
+.vscode/
+# 濡€崇€烽弬鍥︽閿涘牅绗夐崗銉ョ氨閿?
+models/sam3_onnx/
+
+# 娴犲懍绻氶悾?README.md閿涘苯鍙炬担?Markdown 娑撳秴鍙嗘惔?
+*.md
+!README.md
+!白皮书.md
+!使用说明.md
+
+!docs/
+docs/*
+!docs/governance/
+!docs/governance/architecture-exceptions.md
+!docs/perf/
+!docs/perf/baseline.chromium-ci.json
+
+# 压缩脚本
+compress-project.ps1
+project-compressed.zip
+
+# 快速启动脚本
+快速启动-授权系统测试.bat
