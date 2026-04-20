@@ -18,7 +18,7 @@
 
 ## &#x20;视频演示 
 
-\- \[[人物场景固定 seedance2.0生成](https://ashuoai.github.io/AI-CanvasPro/)]\
+[[人物场景固定 seedance2.0生成](https://ashuoai.github.io/AI-CanvasPro/)]
 
 ## ✨ 功能特性
 
