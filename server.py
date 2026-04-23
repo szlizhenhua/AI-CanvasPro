@@ -58,7 +58,7 @@ def _get_int_env(name, default, min_value=None):
         return default
     return value
 
-PORT      = _get_int_env("AICANVAS_PORT", 8777, 1)
+PORT      = _get_int_env("AICANVAS_PORT", 8000, 1)
 BIND_HOST = (os.environ.get("AIC_BIND_HOST", "0.0.0.0") or "").strip() or "0.0.0.0"
 DIRECTORY = os.path.abspath(os.path.dirname(__file__))   # v2/ 绝对路径
 # --- ???? ---
@@ -5469,8 +5469,10 @@ if __name__ == "__main__":
     bind_host = BIND_HOST
     if len(sys.argv) > 2:
         bind_host = str(sys.argv[2]).strip() or BIND_HOST
+
+    # 设置 allow_reuse_address 在绑定之前，否则无效
+    socketserver.ThreadingTCPServer.allow_reuse_address = True
     with socketserver.ThreadingTCPServer((bind_host, port), Handler) as httpd:
-        httpd.allow_reuse_address = True
         display_host = "127.0.0.1" if bind_host == "0.0.0.0" else bind_host
         print("=" * 56)
         if SUBSCRIPTION_API_BASE_OVERRIDDEN:
